@@ -50,8 +50,11 @@ namespace LostV2
                 else if (scene == 6) { scene = 7; }
                 else if (scene == 7) { scene = 8; }
                 else if (scene == 9) { scene = 10; }
+                else if (scene == 10) { scene = 14; }
                 else if (scene == 8) { scene = 12; }
                 else if (scene == 12) { scene = 10; }
+                else if (scene == 15) { scene = 0; }
+                else if (scene == 14) { scene = 15; }
                 Refresh();
                 }
                 else if (e.KeyCode == Keys.B)  //blue button press
@@ -61,6 +64,7 @@ namespace LostV2
                 else if (scene == 4) { scene = 6; }
                 else if (scene == 3) { scene = 4; }
                 else if (scene == 7) { scene = 9; }
+                else if (scene == 10) { scene = 11; }
                 else if (scene == 11) { scene = 0; }
                 else if (scene == 8) { scene = 5; }
                 else if (scene == 12) { scene = 13; }
@@ -133,7 +137,7 @@ namespace LostV2
                         blueLabel.Text = "stay to yourself and ask where the \nhideout is";
                         break;
                     case 8:
-                        outputLabel.Text = "you too? the man says as he sits up in his chair, " +
+                        outputLabel.Text = "you too? the man says as he sits up in his chair. I'm John Hicks  " +
                             "I know where they're hideout is and could tell you where it is as long" +
                             " as I can come with you too get em'";
                         redLabel.Text = "sure";
@@ -158,7 +162,7 @@ namespace LostV2
                     break;
                     case 12:
                     outputLabel.Text = "'my names John Hicks' The man says. We can either go through the" +
-                        "dessert or the longer route through the towns";
+                        " dessert or the longer route through the towns";
                     redLabel.Text = "dessert";
                     blueLabel.Text = "towns";
                         break;
@@ -175,14 +179,29 @@ namespace LostV2
                     break;
                 case 15:
                     outputLabel.Text = "you get eaten by cyotes";
+                    redLabel.Text = "Retart";
+                    blueLabel.Text = "Exit";
+                    break;
+                case 16:
+                    outputLabel.Text = "you shoot, and kill the cyotes. You keep walking to Horseshoe point";
+                    redLabel.Text = "continue";
+                    blueLabel.Text = "";
+                    break;
+                case 17:
+
                     break;
                 default:
                         break;
                 }
             }
 
-         
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
+
+      
+    }
 
     }
 

@@ -49,22 +49,23 @@
             // redLabel
             // 
             this.redLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redLabel.ForeColor = System.Drawing.Color.White;
+            this.redLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.redLabel.Location = new System.Drawing.Point(67, 313);
             this.redLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.redLabel.Name = "redLabel";
             this.redLabel.Size = new System.Drawing.Size(296, 23);
             this.redLabel.TabIndex = 3;
             this.redLabel.Text = "label1";
+            this.redLabel.Click += new System.EventHandler(this.redLabel_Click);
             // 
             // blueLabel
             // 
             this.blueLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blueLabel.ForeColor = System.Drawing.Color.White;
-            this.blueLabel.Location = new System.Drawing.Point(67, 346);
+            this.blueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.blueLabel.Location = new System.Drawing.Point(64, 348);
             this.blueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blueLabel.Name = "blueLabel";
-            this.blueLabel.Size = new System.Drawing.Size(296, 23);
+            this.blueLabel.Size = new System.Drawing.Size(296, 49);
             this.blueLabel.TabIndex = 4;
             this.blueLabel.Text = "label1";
             // 
@@ -72,7 +73,7 @@
             // 
             this.greenlabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.greenlabel.ForeColor = System.Drawing.Color.White;
-            this.greenlabel.Location = new System.Drawing.Point(67, 381);
+            this.greenlabel.Location = new System.Drawing.Point(54, 381);
             this.greenlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.greenlabel.Name = "greenlabel";
             this.greenlabel.Size = new System.Drawing.Size(296, 23);
@@ -94,6 +95,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clint Eastwod";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
