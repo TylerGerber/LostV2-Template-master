@@ -43,17 +43,32 @@ namespace LostV2
             {
                 if (scene == 0) { scene = 1; }
                 else if (scene == 1) { scene = 3; }
-                if (scene == 3) { scene = 4; }
-                if (scene == 4) { scene = 5; }
-
-                
-
+                else if (scene == 2) { scene = 3; }
+                else if (scene == 3) { scene = 4; }
+                else if (scene == 4) { scene = 5; }
+                else if (scene == 5) { scene = 0; }
+                else if (scene == 6) { scene = 7; }
+                else if (scene == 7) { scene = 8; }
+                else if (scene == 9) { scene = 10; }
+                else if (scene == 8) { scene = 12; }
+                else if (scene == 12) { scene = 10; }
+                Refresh();
                 }
                 else if (e.KeyCode == Keys.B)  //blue button press
                 {
-                    if (scene == 0) { scene = 2; }
-                    if (scene == 4) { scene = 5; }
-                    if (scene == 3) { scene = 4; }
+                if (scene == 0) { scene = 2; }
+                else if (scene == 2) { scene = 4; }
+                else if (scene == 4) { scene = 6; }
+                else if (scene == 3) { scene = 4; }
+                else if (scene == 7) { scene = 9; }
+                else if (scene == 11) { scene = 0; }
+                else if (scene == 8) { scene = 5; }
+                else if (scene == 12) { scene = 13; }
+                else if (scene == 13) { scene = 11; }
+
+               
+                else if (scene == 14 ) { scene = 15; } 
+                Refresh();
                 }
                 else if (e.KeyCode == Keys.C)  //green
                 {
@@ -64,7 +79,7 @@ namespace LostV2
                 switch (scene)
                 {
                     case 0:  //start scene 
-                        outputLabel.Text = "Year: 1870 /n Place: Frontier /n /n You" +
+                        outputLabel.Text = "Year: 1870 \nPlace: Frontier \n \n You" +
                             " are working on the farm with you papa and hear a b" +
                             "ig noise in the distance";
                         redLabel.Text = "Tell him";
@@ -79,7 +94,7 @@ namespace LostV2
                         break;
                     case 2:
                         outputLabel.Text = "bandits attack your farm and shoot papa and all the cows" +
-                             "You notice a scar the eye of the head bandits";
+                             "You notice a scar on the eye of the head bandit";
                         redLabel.Text = "continue";
                         blueLabel.Text = "";
                         break;
@@ -115,7 +130,7 @@ namespace LostV2
                             "and fixes his hat 'The bad boys burned down my farm... I want" +
                             "nothin more than to take them down";
                         redLabel.Text = "open up to him";
-                        blueLabel.Text = "stay to yourself and ask where the hideout is";
+                        blueLabel.Text = "stay to yourself and ask where the \nhideout is";
                         break;
                     case 8:
                         outputLabel.Text = "you too? the man says as he sits up in his chair, " +
@@ -125,9 +140,43 @@ namespace LostV2
                         blueLabel.Text = "Nope";
                         break;
                     case 9:
-                        outputLabel.Text = "";
+                        outputLabel.Text = "He tells you they hideout at Horseshoe Point" +
+                        "";
+                        redLabel.Text = "Thanks partner";
+                        blueLabel.Text = "";
                         break;
-                    default:
+                    case 10:
+                        outputLabel.Text = "you begin your walk to horseshoe point " +
+                        ". After a day of walking it starts to get dark";
+                        redLabel.Text = "camp";
+                        blueLabel.Text = "keep walkin'";
+                    break;
+                    case 11:
+                        outputLabel.Text = "you get bit by a rattlesnake and die";
+                    redLabel.Text = "restart";
+                    blueLabel.Text = "exit";
+                    break;
+                    case 12:
+                    outputLabel.Text = "'my names John Hicks' The man says. We can either go through the" +
+                        "dessert or the longer route through the towns";
+                    redLabel.Text = "dessert";
+                    blueLabel.Text = "towns";
+                        break;
+                    case 13:
+                    outputLabel.Text = "you walk all day until you reach a town";
+                    redLabel.Text = "get a room";
+                    blueLabel.Text = "keep movin'";
+                    break;
+                    case 14:
+                    outputLabel.Text = "you sleep for a bit until you get attacked" +
+                    " by cyotes!!";
+                    redLabel.Text = "shoot them";
+                    blueLabel.Text = "run";
+                    break;
+                case 15:
+                    outputLabel.Text = "you get eaten by cyotes";
+                    break;
+                default:
                         break;
                 }
             }
